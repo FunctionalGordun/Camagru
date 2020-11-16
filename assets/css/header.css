@@ -1,0 +1,30 @@
+/* a {
+	color: wheat;
+	text-decoration: none;
+} */
+
+.header_iner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	z-index: 10;
+}
+.logo {
+	display: flex;
+	text-decoration: none;
+}
+.logotext {
+	margin-top: auto;
+	margin-bottom: auto;
+	color: black;
+}
+.navigation_bar {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.nav_link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 25px;
+}
