@@ -1,14 +1,29 @@
-/* a {
-	color: wheat;
-	text-decoration: none;
-} */
+@font-face
+{
+	font-family: BillabongRegular;
+	src: url('../fonts/Billabong.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
 
 .header_iner {
-	width: 100%;
+	/* width: 100%; */
 	display: flex;
 	justify-content: space-between; 
 	align-items: center;
 	z-index: 10;
+	max-width: 975px;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px
 }
 .logo {
 	display: flex;
@@ -18,7 +33,10 @@
 	margin-top: auto;
 	margin-bottom: auto;
 	color: black;
+	font-family: BillabongRegular;
+	font-size: 3vw;
 }
+
 .navigation_bar {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -27,4 +45,44 @@
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 25px;
+}
+
+.profile_block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.submenu {
+	position: absolute;
+	top: 41px;
+	/* position: absolute;
+	top: 37px;
+	left: 76%;
+	width: 100%; */
+	z-index: 10;
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	display: none;
+}
+.grid {
+	display: inline-grid;
+}
+
+.grid_buttons {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+	margin: 3px;
+	padding: 2px;
+	border: 2px solid;
+	border-radius: 5px;
+}
+.navigation_bar .profile:hover .submenu {
+	display: block;
+}
+.submenu:hover .submenu {
+	display: block;
 }
