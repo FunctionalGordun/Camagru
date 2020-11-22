@@ -6,6 +6,14 @@
 	font-style: normal;
 }
 
+.greyline {
+	width: 100vw;
+	height: 1px;
+	background-color: #DBDBDB;
+	position: absolute;
+	left: 0;
+}
+
 .header_iner {
 	/* width: 100%; */
 	display: flex;
@@ -56,10 +64,6 @@ ul {
 .submenu {
 	position: absolute;
 	top: 41px;
-	/* position: absolute;
-	top: 37px;
-	left: 76%;
-	width: 100%; */
 	z-index: 10;
 	-webkit-transition: 0.5s ease-in-out;
 	-moz-transition: 0.5s ease-in-out;
@@ -74,15 +78,120 @@ ul {
 .grid_buttons {
 	text-decoration: none;
 	text-transform: uppercase;
+	background-color: white;
 	color: black;
 	margin: 3px;
 	padding: 2px;
 	border: 2px solid;
 	border-radius: 5px;
+	z-index: 11;
 }
 .navigation_bar .profile:hover .submenu {
 	display: block;
 }
 .submenu:hover .submenu {
 	display: block;
+}
+
+
+.popupsignup, .popupsignin {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 15;
+	transition: all 0.8s ease 0s;
+}
+.popupsignup:target, .popupsignin:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup_area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	cursor: default;
+}
+.popup_body {
+	
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+
+}
+
+.popup_content {
+	background-color: #FFFFFF;
+	border-radius: 20px;
+	color: black;
+	max-width: 80vw;
+	position: relative;
+	padding: 4vw;
+	text-align: center;
+}
+
+
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.popup:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup__overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup__box {
+	margin: 115px auto;
+	width: 444px;
+	height: 584px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.52);
+	position: relative;
+}
+
+.popup_link {
+	color: black;
+}
+
+input {
+	border: 1px solid #cccccc;
+	margin: 5px;
+	height: 23px;
+	text-align: center;
+}
+
+.form_button {
+	text-transform: uppercase;
+	border-radius: 2px;
+	margin-top: 10px;
+	background: #FFFFFF;
+}
+.mesage_error {
+	color: blueviolet;
 }

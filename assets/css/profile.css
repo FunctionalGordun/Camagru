@@ -1,0 +1,15 @@
+
+.profilesign_block
+{
+	text-align: center;
+	margin-top: 20vw;
+}
+
+.profilesign
+{
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	border: 1px solid black;
+	padding: 5px;
+}
