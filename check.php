@@ -1,16 +1,8 @@
 <?php
 	session_start();
 	require_once("dbconnect.php");
+	require_once("functions.php");
 	$_SESSION["error_msg"] = '';
-
-	function redirect_to($mesage, $address_page){
-
-		$_SESSION['error_msg'] = $mesage;
-
-		header("HTTP/1.1 301 Moved Permanently");
-		header("Location:". $address_page);
-		exit();
-	}
 
 	if(isset($_POST['login']))
 	{
@@ -54,7 +46,6 @@
 			// 	$message = "<p style='color:red'>invalid email format!</p>";
 			// 	redirect_to($message, '/Camagru/#popupsignup');
 			// }
-
 			$result_query = $mysql->query("SELECT `email` FROM `users` WHERE `email`='".$email."'");
 			if($result_query->num_rows == 1){
 				if(($row = $result_query->fetch_assoc()) != false){

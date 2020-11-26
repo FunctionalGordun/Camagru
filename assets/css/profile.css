@@ -1,4 +1,13 @@
-
+@font-face
+{
+	font-family: SanFrancisco;
+	src: url('../fonts/SanFrancisco.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: SanFrancisco;
+}
 .profilesign_block
 {
 	text-align: center;
@@ -12,4 +21,56 @@
 	text-transform: uppercase;
 	border: 1px solid black;
 	padding: 5px;
+}
+
+.container {
+	width: 65vw;
+	min-height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.picture_block
+{
+	margin-right: 10vw;
+}
+.prof_img {
+	width: 140px;
+	height: 140px;
+	border: 2px solid #cecbcb;
+	border-radius: 50%;
+}
+.prof_info {
+	width: 75%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.login_set_block {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+.login {
+	font-weight: 800;
+}
+.prof_svg {
+	margin-left: 20px;
+}
+
+.popular_block {
+	display: flex;
+	justify-content: space-between;
+	width: 65%;
+	margin-bottom: 20px;
+}
+
+.profile_greyline {
+	width: 65vw;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1px;
+	background-color: #DBDBDB;
 }

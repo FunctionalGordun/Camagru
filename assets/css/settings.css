@@ -1,0 +1,45 @@
+.profilesign_block
+{
+	text-align: center;
+	margin-top: 20vw;
+}
+
+.profilesign
+{
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.container {
+	width: 60vw;
+	min-height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.set_photo {
+	width: 200px;
+	height: 200px;
+	border: 2px solid #cecbcb;
+	border-radius: 50%;
+}
+.set_photo_small {
+	width: 120px;
+	height: 120px;
+	border: 2px solid #cecbcb;
+	border-radius: 50%;
+}
+
+.photo_link {
+	text-decoration: none;
+}
+
+.profile_set {
+	display: block;
+}

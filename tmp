@@ -1,0 +1,8 @@
+				<?php
+					require_once("dbconnect.php");
+					$query = $connection->query("SELECT `prof_pic` FROM `users` ORDER BY id DESC");
+					while($row = $query->fetch_assoc()){
+						$show_img = base64_encode($row['img']);?>
+						<img src="data:image/jpeg;base64, <?=$show_img ?>" alt="">
+				<?php } ?>
+				<img src="data:image/jpeg;base64, <?=$show_img ?>" alt="">

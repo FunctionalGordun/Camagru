@@ -1,5 +1,14 @@
+@font-face
+{
+	font-family: SanFrancisco;
+	src: url('../fonts/SanFrancisco.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	background-color: white;
+	font-family: SanFrancisco;
 }
 
 .photo_container {
