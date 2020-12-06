@@ -15,7 +15,9 @@
 		<div class="profile_set">
 			<div class="picture_block">
 				<?php
-					$show_img = base64_encode($info['prof_pic']);
+					echo $_COOKIE['user'];
+					if ($info['prof_pic'] != NULL)
+						$show_img = base64_encode($info['prof_pic']);
 					if ($show_img != NULL):?>
 						<a class="photo_link" href="#setphoto">
 							<img class="set_photo" src="data:image/jpeg;base64, <?= $show_img ?>" alt="">

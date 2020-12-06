@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once("dbconnect.php");
+require("dbconnect.php");
 
 $_SESSION["error_msg"] = '';
 
@@ -39,16 +39,43 @@ if(isset($_POST['password']))
 		}
 }
 
-$result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$password'");
-$user = $result->fetch_assoc();
-if (!isset($user))
+// $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$password'");
+// $user = $result->fetch_assoc();
+// if (!isset($user))
+// {
+// 	$message = "<p class='mesage_error'>no user</p>";
+// 	redirect_to($message, '/Camagru/#popupsignin');
+// }
+
+// $dsn = 'mysql:host=localhost;dbname=camagru';
+// $pdo = new PDO($dsn, "root", "");
+
+
+// $sql = "SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$password'";
+// $query = $pdo->prepare($sql);
+// $query->execute($sql);
+// $user = $query->fetchAll();
+// if (!isset($user))
+// {
+// 	$message = "<p class='mesage_error'>no user</p>";
+// 	redirect_to($message, '/Camagru/#popupsignin');
+// }
+
+require 'conectDB.php';
+$sql = 'SELECT * FROM `users` WHERE `login` = :login AND `pass` = :password';
+$query = $pdo->prepare($sql);
+$query->execute(['login' => $login, 'password' => $password]);
+$user = $query->fetchAll();
+// echo $user[0]['login'];
+// print_r($user);
+if (!isset($user[0]['login']))
 {
 	$message = "<p class='mesage_error'>no user</p>";
 	redirect_to($message, '/Camagru/#popupsignin');
 }
-setcookie('user', $user['login'], time() + 3600 * 24, "/Camagru");
+setcookie('user', $user[0]['login'], time() + 3600 * 24, "/Camagru");
 
-$mysql->close();
+// $mysql->close();
 header('Location: /Camagru');
 
 ?>

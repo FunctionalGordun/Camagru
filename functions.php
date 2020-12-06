@@ -8,5 +8,7 @@ function redirect_to($mesage, $address_page){
 	header("Location:". $address_page);
 	exit();
 }
-
+function sendVerificationEmail($usermail, $token) {
+	
+}
 ?>

@@ -7,7 +7,6 @@ $username = "root";
 $password = "";
 $database = "camagru";
 
-
 $mysql = new mysqli($server, $username, $password, $database);
 if(!$mysql)
 {

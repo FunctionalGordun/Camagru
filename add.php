@@ -8,7 +8,7 @@
 </head>
 <body>
 	<?php include "header.php" ?>
-	<div class="add_container">
+	<!-- <div class="add_container">
 		<div class="block1">
 			<div class="button_container">
 				<button>Upload file</button>
@@ -16,12 +16,32 @@
 			</div>
 			<div class="photo_viewer">
 				<img src="./assets/img/2IEqr_kwt68.jpg">
+				
+				
 			</div>
 			<button>PUBLISH</button>
 		</div>
 		<div class="block2">
 			
 		</div>
-	</div>
+	</div> -->
+	<video id="video" autoplay>Video stream</video>
+	<!-- <script async src="./assets/js/camera.js"></script> -->
+	<script>
+		const video = document.getElementById('video');
+
+function startup()
+{
+	navigator.mediaDevices.getUserMedia({
+		audio: false,
+		video: true
+	}).then(stream => {
+		video.srcObject = stream;
+	}).catch(console.error)
+
+}
+
+window.addEventListener('load', startup, false);
+	</script>
 </body>
 </html>

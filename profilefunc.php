@@ -21,6 +21,6 @@ if(isset($_POST['upload'])){
 		$img = addslashes(file_get_contents($_FILES['img_upload']['tmp_name']));
 		$login = $_COOKIE['user'];
 		$mysql->query("UPDATE `users` SET `prof_pic` = '$img' WHERE `login` = '$login'");
-		header('Location: /Camagru/profile.php');
+		header('Location: /Camagru/settings.php');
 	}
 }
