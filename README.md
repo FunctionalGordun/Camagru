@@ -9,7 +9,7 @@ This first project puts you back in the bath after the PHP pool: you will have t
 * [Subject Camagru](https://cdn.intra.42.fr/pdf/pdf/3994/camagru.en.pdf)
 
 ## WARNING
-<p style="color: red;">I haven't finished yet</p>
+- ![I haven't finished yet](https://via.placeholder.com/15/f03c15/000000?text=+) `I haven't finished yet`
 
 ## Preview
 <img width="50%" height="50%"  src="http://i.piccy.info/i9/4344f589ef180d4718dc763341f8b045/1609419054/40617/1389629/21589Snymok_ekrana_2020_12_31_v_15_55_47.jpg">
